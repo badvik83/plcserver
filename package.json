@@ -1,0 +1,20 @@
+{
+  "name": "plcserver",
+  "version": "1.0.0",
+  "description": "Used to create a homebrewed SCADA system",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "mqtt": "^5.11.0",
+    "node-opcua": "^2.125.0",
+    "pg": "^8.7.1"
+  },
+  "keywords": []
+}

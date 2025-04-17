@@ -5,8 +5,8 @@ require('dotenv').config();
 const express = require('express');
 const pool = require('./config/database');
 const mqttService = require('./services/mqtt');
-const cipService = require('./services/cip');
-const tcpService = require('./services/tcp');
+//const cipService = require('./services/cip');
+//const tcpService = require('./services/tcp');
 const { startOpcUA } = require('./services/opcua.client');
 const apiRoutes = require('./routes/api');
 
