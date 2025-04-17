@@ -18,7 +18,6 @@ async function startOpcUA({ maxDepth = 1 } = {}) {
   }
 
   const client = OPCUAClient.create({ endpointMustExist: false });
-  const nodeIdStr = nodeId.toString();
   let session;
 
   // Reconnection logic
@@ -50,7 +49,8 @@ async function startOpcUA({ maxDepth = 1 } = {}) {
 
         for (const ref of browseResult.references) {
           const { nodeId, browseName, nodeClass } = ref;
-          console.log(`${indent}  - ${browseName} (${nodeId}, ${NodeClass[nodeClass]})`);
+          const nodeIdStr = nodeId.toString();
+          console.log(`${indent}  - ${browseName} (${nodeIdStr}, ${NodeClass[nodeClass]})`);
 
           // Try reading value if it's a Variable node
           if (nodeClass === NodeClass.Variable) {
