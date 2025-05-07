@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Used to create a homebrewed SCADA system",
   "main": "main.js",
+  "bin": "opcua-app.js",
   "scripts": {
     "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +17,13 @@
     "node-opcua": "^2.125.0",
     "pg": "^8.7.1"
   },
-  "keywords": []
+  "keywords": [],
+  "pkg": {
+    "assets": [
+      "node_modules/node-opcua-crypto/**/*",
+      "node_modules/node-opcua/**/*"
+    ],
+    "targets": ["node18-win-x64"], 
+    "outputPath": "." 
+  }
 }

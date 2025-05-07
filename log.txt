@@ -1,0 +1,1 @@
+[2025-05-07T02:15:24.617Z] Connecting to OPC UA at opc.tcp://192.168.1.50:4840
